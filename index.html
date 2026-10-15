@@ -2,154 +2,268 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Height Horizon</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Height Horizon | The Cinematic Growth Blueprint</title>
 <style>
-  body {
-    background: radial-gradient(circle, #080808 0%, #000000 100%);
-    color: #e0e0e0;
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 20px;
+  :root {
+    --bg-base: #030303;
+    --card-bg: rgba(14, 14, 14, 0.85);
+    --gold: #dfbe6f;
+    --gold-glow: rgba(223, 190, 111, 0.15);
+    --text-primary: #ffffff;
+    --text-secondary: #999999;
+    --border-color: rgba(223, 190, 111, 0.25);
   }
-  .container {
-    max-width: 700px;
-    margin: 0 auto;
-    padding: 20px;
-  }
-  h1, h2 {
-    color: #f3e5ab;
-    text-align: center;
-  }
-  p {
-    line-height: 1.6;
-    color: #cccccc;
-  }
-  .price-box {
-    text-align: center;
-    margin: 30px 0;
-    font-size: 1.5rem;
-    color: #f3e5ab;
-    font-weight: bold;
-  }
-  form {
-    margin: 30px auto;
-    padding: 25px;
-    background: rgba(0,0,0,0.6);
-    border: 1px dashed #f3e5ab;
-    border-radius: 8px;
-    max-width: 450px;
+
+  * {
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
   }
-  .form-group {
+
+  body {
+    background-color: var(--bg-base);
+    color: var(--text-primary);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    line-height: 1.7;
+  }
+
+  .wrapper {
+    max-width: 640px;
+    margin: 0 auto;
+    padding: 40px 20px;
+  }
+
+  header {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+
+  .tag {
+    display: inline-block;
+    padding: 6px 16px;
+    background: var(--gold-glow);
+    border: 1px solid var(--border-color);
+    color: var(--gold);
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    border-radius: 30px;
     margin-bottom: 15px;
   }
-  .form-group label {
-    display: block;
-    margin-bottom: 5px;
-    color: #f3e5ab;
+
+  h1 {
+    font-size: 2.4rem;
+    font-weight: 800;
+    letter-spacing: -0.5px;
+    margin-bottom: 10px;
+  }
+
+  .subtitle {
+    color: var(--text-secondary);
+    font-size: 1.05rem;
+  }
+
+  .card {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 16px;
+    padding: 30px;
+    margin-bottom: 25px;
+    box-shadow: 0 25px 50px rgba(0,0,0,0.8);
+  }
+
+  .card h3 {
+    color: var(--gold);
+    font-size: 1.25rem;
+    margin-bottom: 12px;
+  }
+
+  .card p {
+    color: var(--text-secondary);
     font-size: 0.95rem;
+    margin-bottom: 15px;
   }
-  .form-group input {
+
+  .btn-main {
+    display: block;
     width: 100%;
-    padding: 10px;
-    background: #111;
-    border: 1px solid #f3e5ab;
-    color: #fff;
-    border-radius: 4px;
-    box-sizing: border-box;
-  }
-  button {
-    width: 100%;
+    padding: 16px;
+    background: var(--gold);
+    color: #030303;
+    font-weight: 700;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 8px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
     margin-top: 20px;
-    padding: 12px;
-    background: #f3e5ab;
-    color: #000;
-    font-weight: bold;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    font-size: 1rem;
+    transition: 0.2s ease;
   }
-  button:hover {
-    background: #e2d295;
+
+  .btn-main:hover {
+    background: #f3d488;
+    transform: translateY(-1px);
   }
+
+  .price-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+    padding-bottom: 18px;
+    margin-bottom: 22px;
+  }
+
+  .price-row span {
+    color: var(--text-secondary);
+  }
+
+  .price-row h2 {
+    color: var(--gold);
+    font-size: 2rem;
+  }
+
   .qr-container {
     text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: 22px;
   }
+
   .qr-container img {
-    max-width: 180px;
-    width: 100%;
+    width: 180px;
+    height: 180px;
+    border-radius: 10px;
+    border: 2px solid var(--gold);
+    padding: 5px;
+    background: #fff;
+    margin-bottom: 10px;
+  }
+
+  .notice {
+    background: rgba(223, 190, 111, 0.05);
+    border-left: 3px solid var(--gold);
+    padding: 12px 15px;
+    font-size: 0.88rem;
+    color: var(--text-secondary);
     border-radius: 4px;
-    border: 2px solid #e0e0e0;
+    margin-bottom: 22px;
   }
-  .note {
-    font-size: 0.85rem;
-    color: #ffcc00;
-    margin-bottom: 15px;
-    text-align: center;
-    line-height: 1.4;
+
+  .notice strong {
+    color: var(--gold);
   }
-  .footer-note {
+
+  .field {
+    margin-bottom: 16px;
+  }
+
+  label {
+    display: block;
     font-size: 0.8rem;
-    color: #cccccc;
-    margin-top: 15px;
-    line-height: 1.4;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--text-secondary);
+    margin-bottom: 6px;
+  }
+
+  input {
+    width: 100%;
+    padding: 13px 15px;
+    background: rgba(0,0,0,0.6);
+    border: 1px solid rgba(255,255,255,0.15);
+    border-radius: 8px;
+    color: #fff;
+    font-size: 0.95rem;
+  }
+
+  input:focus {
+    outline: none;
+    border-color: var(--gold);
+  }
+
+  button[type="submit"] {
+    width: 100%;
+    padding: 15px;
+    background: var(--gold);
+    color: #030303;
+    font-weight: 700;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-top: 10px;
+  }
+
+  footer {
     text-align: center;
+    color: var(--text-secondary);
+    font-size: 0.75rem;
+    margin-top: 30px;
+    border-top: 1px solid rgba(255,255,255,0.05);
+    padding-top: 15px;
   }
 </style>
 </head>
 <body>
 
-<div class="container">
-  <h1>Height Horizon</h1>
-  <p style="text-align: center;">Unlock your true potential. Get the ultimate guide to growth, posture, and self-improvement.</p>
+<div class="wrapper">
+  <header>
+    <div class="tag">Cinematic Edition</div>
+    <h1>Height Horizon</h1>
+    <p class="subtitle">The ultimate blueprint for natural growth optimization.</p>
+  </header>
 
-  <div class="price-box">
-    Price: ₹149 Only
+  <div class="card">
+    <h3>Unlock Your True Potential</h3>
+    <p>Height Horizon is a precision-engineered visual guide built to help you maximize your genetic height potential through targeted posture realignment, spinal decompression protocols, and advanced recovery strategies.</p>
+    <p>Step-by-step instructions designed for maximum real-world results.</p>
+    <a href="#pay-section" class="btn-main">Get Instant Access — ₹149</a>
   </div>
 
-  <!-- Manual Payment & Customer Details Form -->
-  <form action="https://formsubmit.co/heighthorizon.official@gmail.com" method="POST">
-    
-    <p style="color: #f3e5ab; font-weight: 600; font-size: 1.1rem; margin-bottom: 12px; text-align: center;">Step 1: Scan & Pay ₹149 via Paytm</p>
+  <div class="card" id="pay-section">
+    <div class="price-row">
+      <span>Complete eBook</span>
+      <h2>₹149</h2>
+    </div>
+
     <div class="qr-container">
       <img src="paytm-qr.jpg" alt="Payment QR Code">
+      <p>Scan using Paytm, Google Pay or PhonePe</p>
     </div>
 
-    <p style="color: #f3e5ab; font-weight: 600; font-size: 1.1rem; margin-bottom: 10px; text-align: center;">Step 2: Fill Details After Payment</p>
-    <p class="note">
-      ⚠️ <strong>Important:</strong> Apni sahi Email ID aur Paytm ki UPI Transaction ID (UTR No.) zaroor bharein. Agar yeh galat ya khali hui, toh payment match nahi hogi aur aapki eBook email par nahi bhej paayenge!
-    </p>
-    
-    <!-- Customer Name Input -->
-    <div class="form-group">
-      <label>Full Name:</label>
-      <input type="text" name="name" placeholder="Enter your full name" required>
+    <div class="notice">
+      <strong>Important:</strong> Pehle upar diye gaye QR code par ₹149 pay karein. Payment ke baad jo <strong>UPI / UTR Transaction ID</strong> milegi, use neeche enter karein taaki hum verify karke aapko email par eBook bhej sakein.
     </div>
 
-    <!-- Email Input -->
-    <div class="form-group">
-      <label>Email Address (Where eBook will be sent):</label>
-      <input type="email" name="email" placeholder="Enter your email address" required>
-    </div>
+    <form action="https://formsubmit.co/heighthorizon.official@gmail.com" method="POST">
+      <input type="hidden" name="_next" value="https://harshkundara.github.io/height-horizon/thank-you.html">
+      <input type="hidden" name="_subject" value="New Height Horizon Order!">
+      <input type="hidden" name="_captcha" value="false">
 
-    <!-- Transaction ID Input -->
-    <div class="form-group">
-      <label>Paytm UPI Transaction ID / UTR No:</label>
-      <input type="text" name="transaction_id" placeholder="Enter 12-digit UPI reference / transaction ID" required>
-    </div>
+      <div class="field">
+        <label>Your Full Name</label>
+        <input type="text" name="Name" placeholder="Enter your name" required>
+      </div>
 
-    <!-- Hidden FormSubmit Settings -->
-    <input type="hidden" name="_captcha" value="false">
+      <div class="field">
+        <label>Your Email Address</label>
+        <input type="email" name="Email" placeholder="name@example.com" required>
+      </div>
 
-    <button type="submit">Submit Payment Details</button>
-    
-    <p class="footer-note">
-      After verification, you will receive your eBook within 24 hours directly on your email.
-    </p>
-  </form>
+      <div class="field">
+        <label>UPI / UTR Transaction ID</label>
+        <input type="text" name="UTR Reference" placeholder="Enter 12-digit UTR number" required>
+      </div>
 
+      <button type="submit">Verify & Submit Details</button>
+    </form>
+  </div>
+
+  <footer>
+    &copy; 2026 Height Horizon. All rights reserved.
+  </footer>
 </div>
 
 </body>
