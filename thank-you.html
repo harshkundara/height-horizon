@@ -2,73 +2,46 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Thank You | Height Horizon</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Payment Successful — Welcome to Height Horizon</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,700;1,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
-  :root {
-    --bg-base: #030303;
-    --card-bg: rgba(14, 14, 14, 0.85);
-    --gold: #dfbe6f;
-    --border-color: rgba(223, 190, 111, 0.25);
-  }
-  body {
-    background-color: var(--bg-base);
-    color: #fff;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    padding: 20px;
-    margin: 0;
-  }
-  .box {
-    background: var(--card-bg);
-    border: 1px solid var(--border-color);
-    border-radius: 16px;
-    padding: 40px 30px;
-    max-width: 500px;
-    width: 100%;
-    text-align: center;
-    box-shadow: 0 25px 50px rgba(0,0,0,0.8);
-  }
-  .check {
-    width: 60px;
-    height: 60px;
-    background: rgba(223, 190, 111, 0.1);
-    border: 2px solid var(--gold);
-    color: var(--gold);
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 28px;
-    margin: 0 auto 20px auto;
-  }
-  h1 { font-size: 1.8rem; margin-bottom: 12px; }
-  p { color: #999; font-size: 0.95rem; line-height: 1.6; margin-bottom: 25px; }
-  .btn {
-    display: inline-block;
-    padding: 12px 24px;
-    background: var(--gold);
-    color: #030303;
-    font-weight: 700;
-    text-decoration: none;
-    border-radius: 6px;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    font-size: 0.85rem;
-  }
+:root{--ink:#050505;--panel:#11100d;--line:#2e2713;--gold:#D4AF37;--pale:#F1D78A;--ivory:#F5F3ED;--grey:#B8B8B8}
+*{box-sizing:border-box;margin:0}
+body{background:var(--ink);color:var(--ivory);font:400 17px/1.65 Inter,system-ui,sans-serif;min-height:100vh;display:flex;align-items:center;justify-content:center;padding:40px 20px}
+.wrap{max-width:640px;width:100%;background:var(--panel);border:1px solid var(--gold);border-radius:8px;padding:48px 36px;text-align:center;box-shadow:0 0 90px rgba(212,175,55,.15)}
+h1{font-family:"Cormorant Garamond",Georgia,serif;font-size:clamp(2.5rem,5vw,3.5rem);font-weight:700;color:var(--pale);line-height:1.1;margin-top:20px}
+p{color:var(--grey);margin-top:16px;font-size:1.05rem}
+.btn{display:inline-block;text-decoration:none;background:linear-gradient(135deg,var(--pale),var(--gold));color:#080808;font-weight:600;padding:18px 36px;border-radius:4px;letter-spacing:.02em;box-shadow:0 0 40px rgba(212,175,55,.3);margin-top:32px;width:100%;transition:transform .25s,box-shadow .25s}
+.btn:hover{transform:translateY(-3px);box-shadow:0 0 70px rgba(212,175,55,.55)}
+.steps{text-align:left;margin-top:36px;border-top:1px solid var(--line);padding-top:28px}
+.steps h3{font-family:"Cormorant Garamond",Georgia,serif;font-size:1.6rem;color:var(--gold);margin-bottom:14px}
+.steps ol{list-style-position:inside;color:#d9d6cd;font-size:.95rem;line-height:1.8}
+.steps li b{color:var(--pale)}
+.check-icon{width:64px;height:64px;border-radius:50%;border:2px solid var(--gold);display:flex;align-items:center;justify-content:center;margin:0 auto;color:var(--gold);font-size:2rem;box-shadow:0 0 30px rgba(212,175,55,.3)}
+.footer-note{margin-top:30px;font-size:.75rem;color:#7a766a}
 </style>
 </head>
 <body>
+<div class="wrap">
+  <div class="check-icon">✓</div>
+  <h1>Payment Successful.<br><span style="font-style:italic;font-weight:500;color:var(--ivory);">Welcome to Height Horizon.</span></h1>
+  <p>You have chosen evidence over hype — and that is the absolute right start. Your 104-page science guide is ready for immediate download below.</p>
 
-<div class="box">
-  <div class="check">✓</div>
-  <h1>Details Received Successfully</h1>
-  <p>We are verifying your UTR reference ID. Once confirmed, your copy of <span style="color:var(--gold);">Height Horizon</span> will be delivered straight to your email within a few hours.</p>
-  <a href="index.html" class="btn">Back to Home</a>
+  <a href="HEIGHT HORIZON.pdf" download class="btn">Download Your eBook Now (PDF)</a>
+
+  <div class="steps">
+    <h3>Your immediate action steps</h3>
+    <ol>
+      <li><b>Save the file:</b> Download and secure the PDF on your phone or computer right now.</li>
+      <li><b>Establish your baseline:</b> Check Appendix E for the Posture Self-Assessment before starting.</li>
+      <li><b>Choose your blueprint:</b> Jump straight to Chapter 27 (early puberty), 28 (late puberty) or 29 (post-puberty).</li>
+    </ol>
+  </div>
+
+  <p class="footer-note">Educational guide. Not medical advice. © Harsh Kundara (harshkdthenix)</p>
 </div>
-
 </body>
 </html>
